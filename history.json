@@ -1,0 +1,170 @@
+[
+  {
+    "date": "Feb 25th 2022, 8:48:21 pm",
+    "req": {
+      "minPrice": "",
+      "maxPrice": ""
+    },
+    "res": "{\n  \"error\": \"there is no valid input\",\n  \"code\": 400\n}"
+  },
+  {
+    "date": "Feb 26th 2022, 12:01:43 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:06 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:08 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:10 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:11 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:14 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:17 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:19 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:22 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:24 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:30 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:33 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:37 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:41 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:46 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:49 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:02:55 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Feb 26th 2022, 12:03:07 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "{\n  \"code\": 200,\n  \"status\": \"buy\",\n  \"paymentInUsd\": \"3.09\",\n  \"currentRateInUSD\": \"42.00\",\n  \"cardValue\": null,\n  \"cardAndFeeDeducted\": null,\n  \"transactionID\": 5304156,\n  \"tradeID\": \"335557002437\",\n  \"platform\": \"ps4\",\n  \"assetID\": 67301849,\n  \"resourceID\": 67301849,\n  \"baseID\": 67301849,\n  \"playerName\": \"Kevin De Bruyne\",\n  \"position\": \"any\",\n  \"rating\": 92,\n  \"rating_search\": 91,\n  \"startPrice\": 223000,\n  \"coinAmount\": 268000,\n  \"lockExpires\": 1645821262,\n  \"ea_expires_at\": 1645824634,\n  \"customerID\": 191705,\n  \"ignoreHash\": [\n    \"D8CAF54F7C2A495FA7D8B59B3665D2FC\",\n    \"62bae3585197c0bdafe7ad87565561fd\",\n    \"dea61753452c70dd52408c3764ee5d43\",\n    \"15e83032e70c299da30dcb02db6e3184\",\n    \"5554864df84bbca912d3587ea0a7854b\",\n    \"da3718afc66ac1f59136b98a8ceb3aa5\",\n    \"6917b9fd36d0a88fed6cb9946fcca6dc\",\n    \"812a79b36b9172a83008527f16bbfd23\",\n    \"3e3aedcafe01753b2cdab656e102a37a\",\n    \"b68e5b318985245b7bfe1824e149af8e\",\n    \"8adf06665581e98c9f48cdb95b3604b0\",\n    \"cb3507fb86158dadf5dc41987f2cae03\",\n    \"2deefb4c8191262f104bf16c198764d0\",\n    \"028246b7ddf31cfc3787944b4873130d\",\n    \"9664ff970e071f0337159c67c17e0580\",\n    \"90b228c81d66a8beed4c2521802cb4ab\",\n    \"0e04cd250b2930c9e942b2a9f5fbc83b\",\n    \"a3e58004619673788c540d57aedda02e\",\n    \"05c990df935ca251a416bf618581f068\",\n    \"39abbbcef66b6ac0bd72f1e5e45aaf3c\",\n    \"fe76cb03e15634e07801fda0f8c74c6e\",\n    \"b20afec0e81b2ea14aceff22518b05c4\",\n    \"ec1a82e6434c18437755e16338f26f48\",\n    \"57e0a0918b9f0e8974602c68dd499250\",\n    \"be8df64489df3056f9b31cf613ee0b8f\",\n    \"83426809dcb8198c20794043a2a1fa82\",\n    \"8cf2682aff450e5abda93b5de6843161\",\n    \"6143dad2471af7f11b52aa661a2977cb\",\n    \"4655074b623415af048643b2e0b4ae85\",\n    \"70362bcbcac6e07d7beb30c00fe1e869\",\n    \"f08fe5f5cadac65a42b3d3e5362f7973\",\n    \"ed3c7e2c6e68def5c90c26b4fa7aa8d0\",\n    \"82930e3899d76352f0a617cd94d067e7\",\n    \"67ab8ba4bf8adf0d10223c420c0f4cee\",\n    \"5dcfd4b1b9642c712da94cb541d7b923\",\n    \"b7b011a7eb2875aeda01acf3ed779246\",\n    \"1f173d199fa816759e72ab97c96c9b0d\",\n    \"48b4615c40f25da6a83df4e8ba69095c\",\n    \"3cd42137b09202148d1b9400bbd24cb4\",\n    \"9d3724911076d0abb901250c12c3780e\",\n    \"2528b4dd7b3d1fe0757589894fea35c3\",\n    \"2798fd7775ceade89e64e69ccfb3f0e5\",\n    \"406ae7b9a7efe9b982ab2180df2acd3f\",\n    \"92d1d415e4c41262fd9b20a0f759a531\",\n    \"682559fa8c28e2bf2a6bdb78cf9c88f9\",\n    \"7554b16504669575ce41bc2cd140cfa4\",\n    \"7a0a909be190e268d9d85b8d6df7d9f4\",\n    \"b4869fc97b61344e4997c01136f52580\",\n    \"8b42afe1f140d1e086f2407f6c536156\",\n    \"5ee1858d81aaa3b4852e3e8f5a11c4e0\",\n    \"b2a48f851d9192074993084e9bd34c18\",\n    \"d3e5d7ef58bd362ffa7754917fbe2949\",\n    \"7254bf25a2fb479919508cbb13cb8da4\",\n    \"d74ace727eb3cae2df8be9ca092b1b8a\",\n    \"a5a7d82b052a70ba6b3b67beddb8d422\",\n    \"a86ccac0dada258bd79bca2db2582577\",\n    \"bf65db9e5793ffb0515d0761c69d4d87\",\n    \"3CFA45997A26B3FFABE3D59561023378\",\n    \"BDAB5D04D225646FED02787B6E2329B1\",\n    \"C359C8B59ABBA18DB7303B7DF13A8FE2\",\n    \"9778a49364ce14bdd2e9163a435ce67f\",\n    \"08530e0e3e878b8157b9090f4ff5cb32\",\n    \"84e68ff3151ab26d4caef741e912f5b3\",\n    \"f27e02e31a5555b8e3b868cd4793578c\",\n    \"86ce9d71b26631c0ca447a1c2c2c3321\",\n    \"121cd26acb36e744a04a7a25a8b99da3\",\n    \"c56e72f9175831fdfada74f6c55feed0\",\n    \"a20e66901584ed0c1b7db5f93d20cd8a\",\n    \"932c7741aa17239cb8ccebcaa2a08652\",\n    \"cf529d851f757d1ada3725333456f34a\",\n    \"ca97a31a90379882b92fe8252ccfddb5\",\n    \"9b4d6f60c496e24886c8585c121f8986\",\n    \"5f038100acdcac0e27123a80d17d84db\",\n    \"1bc01d1c18e9084e09300ac2b2ed8cd5\",\n    \"bc4e49b8b647b55bff4d55784445ed66\",\n    \"c32f5dd41f740fe7f72823225422a267\",\n    \"3d1584bf90d381ff6a109220d536d754\",\n    \"5c1246ca5a9cb87f18b01d1e291224dc\",\n    \"cc7109675a3ef8658d8ff65dd568681c\",\n    \"e163502f6ade69ba65c2483265bebf85\",\n    \"16f921b040945cff32c920bd20a99a13\",\n    \"0e958d605567ce700db0788611d65e38\",\n    \"90600709a2b958a75fe80a6150b433fd\",\n    \"148341dbe8357923951196dc84947322\",\n    \"bf3a9a839b8417638e32e1899da75961\",\n    \"00eece6787b9c394d1f8e882a2fd6e32\",\n    \"8e88690a265dcf1738fa27d829e89dc0\",\n    \"8281320de8de9cb09e3e45524490b54e\",\n    \"4678c7fd4a92cdf7a082062c764e5291\",\n    \"33efd0a2c6bc9686ffe6a2d28308b5dd\",\n    \"c67466d6173ce0312f8e0e7036bf94d4\",\n    \"94eb26549b1f208a18926c9d1856da5b\",\n    \"bffdfbf98dc27fd6cb5f97ea97257a42\",\n    \"dfba71f2eaabaa116aced1cd1b394191\",\n    \"1bcace38e45087043de76448dd15f8f5\",\n    \"af31ebcc4589d05e336e0fcd99b66c93\"\n  ],\n  \"balance\": 0,\n  \"balance_user\": \"0.00\",\n  \"search_name\": \"Bruyne\",\n  \"search_position\": 1,\n  \"IsIcon\": 0\n}"
+  },
+  {
+    "date": "Mar 1st 2022, 12:09:46 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  },
+  {
+    "date": "Mar 1st 2022, 12:09:48 am",
+    "req": {
+      "minPrice": "100",
+      "maxPrice": "400000"
+    },
+    "res": "\"404\""
+  }
+]

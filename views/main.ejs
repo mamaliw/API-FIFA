@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>FIFA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</head>
+<body style="font-family: 'Dongle', sans-serif; font-size: 2rem">
+<div class="form-control"
+     style="
+          padding: 40px;
+          border-radius: 8px;
+          border: none;
+          margin: 40px auto;
+          width: 70%;
+          background-color: #fafafa;
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2)
+        "
+>
+    <div class="container">
+
+        <!--          Form-->
+        <form action="/pickup"
+              method="post">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3" style="">
+                        <span class="input-group-text">Minimum Player Price</span>
+                        <input type="number" name="minPrice" value="<%= config.minPrice %>" class="form-control"
+                               aria-label="Minimum Player Price">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3" style="">
+                        <span class="input-group-text">Maximum Player Price</span>
+                        <input type="number" name="maxPrice" value="<%= config.maxPrice %>" class="form-control"
+                               aria-label="Minimum Player Price">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%">Pick Up! ⬆️</button>
+        </form>
+
+        <!--        Result-->
+        <% if(code !== 0){ %>
+
+            <div class="card"
+                 style="margin-top: 50px; margin-bottom: 50px; box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2)">
+                <div class="card-header">
+                    Result
+                </div>
+                <div class="card-body">
+                    <p class="card-text"></p>
+                    <% if (code === 404){ %>
+                        <div class="alert alert-warning" role="alert">
+                            No Card Available Right Now! 🤷‍
+                        </div>
+                    <% }else if (code === 500) { %>
+                        <div class="alert alert-danger" role="alert">
+                            An Error Occurred! ❌
+                            <p class="card-text"><b>Error: </b><%= result.error %></p>
+                        </div>
+                    <% }else if (code === 2) { %>
+                        <div class="alert alert-info" role="alert">
+                            <p class="card-text"><b>Purchase Result: </b><%= purchaseStatus ? 'Success ☑️' : 'Fail (see history or CMD logs) ‼️'%></p>
+                        </div>
+                    <% }else if (code === 200){ %>
+                        <div class="alert alert-success" role="alert">
+                            <div class="row" style="font-size: larger">
+                                <div class="col">
+                                    <p class="card-text"><b>🏆 Player Name: </b><%= result.playerName %></p>
+                                    <p class="card-text"><b>🏁 Position: </b><%= result.position %></p>
+                                    <p class="card-text"><b>⭐️ Rating: </b><%= result.rating %></p>
+                                    <p class="card-text"><b>💲 Start Price: </b><%= result.startPrice %></p>
+                                    <p class="card-text"><b>💵 Coin Amount: </b><%= result.coinAmount %></p>
+                                    <p class="card-text"><b>💲 Balance: </b><%= result.balance %></p>
+                                </div>
+                                <div class="col">
+                                    <p class="card-text">⭕️ Code: <%= result.code %></p>
+                                    <p class="card-text">📉 Status: <%= result.status %></p>
+                                    <p class="card-text">
+                                        💲 Payment: <%= result.paymentInUsd ? result.paymentInUsd + ' $' : '' %></p>
+                                    <p class="card-text">🆔 TransactionID: <%= result.transactionID %></p>
+                                    <p class="card-text"></p>
+                                    <p class="card-text">⏳ Expire Time: <%= new Date(parseInt(result.lockExpires)*1000).toString() %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <form method="post" action="/action">
+                            <input hidden name="transactionID" value="<%= result.transactionID %>"></input>
+                            <div class="row" style="">
+                                <div class="col">
+                                    <button type="submit" name="action" value="bought" class="btn btn-primary btn-lg" style="width: 100%; height: 60px; font-size: x-large">Bought ✔️</button>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" name="action" value="cancel" class="btn btn-outline-danger btn-lg" style="width: 100%; height: 60px; font-size: x-large">Cancel ❌</button>
+                                </div>
+                            </div>
+                        </form>
+                    <% } %>
+
+                </div>
+            </div>
+
+        <% } %>
+
+        <!--        Accordion History-->
+        <div class="accordion" style="margin-top: 10px">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        History 📖
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <form action="/clear-history" method="get">
+                            <button type="submit" class="btn btn-outline-danger" style="width: 100%">Clear History
+                            </button>
+                        </form>
+                        <% history.map((el) => { %>
+                            <div class="card">
+                                <div class="card-header">
+                                    <%= el.date %>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"><b>💲 Min Price: </b><%= el.req.minPrice %></p>
+                                    <p class="card-text"><b>💲 Max Price: </b><%= el.req.maxPrice %></p>
+                                    <p class="card-text"><b>Result: </b><code><%= el.res %></code></p>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--        Accordion Config-->
+        <div class="accordion" style="margin-top: 10px">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Config 🔧
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                     data-bs-parent="#accordionExample">
+                    <form class="accordion-body" method="post" action="/config">
+                        <div class="row" style="margin: 20px 20px 0 20px">
+                            <div class="col-5">
+                                <div class="input-group mb-3" style="">
+                                    <span class="input-group-text">API Username</span>
+                                    <input type="text" name="apiUsername" value="<%= config.apiUsername %>"
+                                           class="form-control" aria-label="Username">
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="input-group mb-3" style="">
+                                    <span class="input-group-text">Token</span>
+                                    <input type="text" name="secret" value="<%= config.secret %>"
+                                           class="form-control" aria-label="Token">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <select name="platform" class="col form-select">
+                                    <option selected value="ps4">PS4/PS5</option>
+                                    <option value="xbox">XBox</option>
+                                    <option value="pc">PC</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: 0 20px 20px 20px">
+                            <div class="col">
+                                <div class="input-group mb-2" style="">
+                                    <span class="input-group-text">Email</span>
+                                    <input type="text" name="email" value="<%= config.email %>"
+                                           class="form-control" aria-label="Email">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Apply</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

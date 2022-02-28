@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>FIFA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</head>
+<body style="font-family: 'Dongle', sans-serif; font-size: 2rem">
+<main>
+    <form
+            class="form-control"
+            action="/"
+            method="get"
+            style="
+          padding: 40px;
+          border-radius: 8px;
+          border: none;
+          margin: 40px auto;
+          width: 70%;
+          background-color: #fafafa;
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2)
+        "
+    >
+        <form class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3" style="">
+                        <span class="input-group-text">Minimum Player Price</span>
+                        <input type="number" class="form-control" aria-label="Minimum Player Price">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3" style="">
+                        <span class="input-group-text">Maximum Player Price</span>
+                        <input type="number" class="form-control" aria-label="Minimum Player Price">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" style="width: 100%">Pick Up!</button>
+
+
+            <div class="card"  style="margin-top: 50px; margin-bottom: 50px">
+                <div class="card-header">
+                    Result
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+
+            <!--        Accordion History-->
+            <div class="accordion" >
+                <div class="accordion-item">
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            History 📖
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card">
+                                <div class="card-header">
+                                    Featured
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--        Accordion Config-->
+            <div class="accordion" style="margin-top: 10px">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Config 🔧
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <form class="accordion-body">
+                            <div class="row" style="margin: 20px">
+                                <div class="col">
+                                    <div class="input-group mb-3" style="">
+                                        <span class="input-group-text">API Username</span>
+                                        <input type="text" class="form-control" aria-label="Username">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <select class="col form-select" aria-label="Default select example">
+                                        <option selected value="ps4">PS4/PS5</option>
+                                        <option value="xbox">XBox</option>
+                                        <option value="pc">PC</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+    </form>
+</main>
+</body>
+</html>
